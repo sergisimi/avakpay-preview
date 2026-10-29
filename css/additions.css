@@ -31,6 +31,39 @@
   .ap-mark { width: 2.25rem; height: 2.25rem; font-size: 1.125rem; }
 }
 
+/* Key facts under the hero CTA (critique P1: price was buried in tile 6). Fades in after the live hero reveal. */
+.ap-hero-facts {
+  margin-top: 1rem;
+  font-family: Geist, Arial, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--text-secondary, #ffffff9e);
+  text-align: center;
+  animation: ap-fade-in 0.6s ease 1.2s both;
+}
+
+/* Merchant-side line after the 3 customer steps (critique P1: the page never said what the merchant sets up).
+   Placed after the steps: above them, the hero's parallax bank card drifts over it. */
+.ap-steps-note {
+  max-width: 40rem;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+  font-family: Geist, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--text-secondary, #ffffff9e);
+  text-align: center;
+}
+
+@keyframes ap-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ap-hero-facts { animation: none; }
+}
+
 /* override: the .brand link held only SVGs before; with text inside, the browser link underline shows */
 .brand { text-decoration: none; }
 
