@@ -34,21 +34,6 @@
 /* override: the .brand link held only SVGs before; with text inside, the browser link underline shows */
 .brand { text-decoration: none; }
 
-/* Mockup marker on legal pages (mockup only, not ported) */
-.ap-mockup-banner {
-  position: fixed;
-  left: 16px;
-  bottom: 16px;
-  z-index: 9999;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: var(--brand-green, #96ec00);
-  color: var(--black, #00070a);
-  font-family: Geist, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-}
-
 /* override: big GetMach sign in the fact section, hidden until the AvakPay mark exists */
 .sign_page { display: none; }
 
