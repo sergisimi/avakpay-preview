@@ -1,0 +1,56 @@
+/* AvakPay additions: the complete list of styles to recreate in Webflow Designer.
+   New classes use the ap- prefix; overrides of live classes are marked "override". */
+
+/* Placeholder text wordmark in the navbar .brand slot (replaces .sign + .typemark until the real logo exists) */
+.ap-wordmark {
+  font-family: Geist, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Placeholder brand mark in the .sign slot: lime circle with "A", sized like the live .sign (2.5rem, 2.25rem on phones) */
+.ap-mark {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--brand-green, #96ec00);
+  color: var(--black, #00070a);
+  display: grid;
+  place-items: center;
+  font-family: Geist, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+}
+@media screen and (max-width: 479px) {
+  .ap-mark { width: 2.25rem; height: 2.25rem; font-size: 1.125rem; }
+}
+
+/* override: the .brand link held only SVGs before; with text inside, the browser link underline shows */
+.brand { text-decoration: none; }
+
+/* Mockup marker on legal pages (mockup only, not ported) */
+.ap-mockup-banner {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--brand-green, #96ec00);
+  color: var(--black, #00070a);
+  font-family: Geist, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* override: big GetMach sign in the fact section, hidden until the AvakPay mark exists */
+.sign_page { display: none; }
+
+/* override, mockup only: "Made with Webflow" badge injected on non-Webflow hosts */
+html body .w-webflow-badge { display: none !important; }
